@@ -8,7 +8,7 @@ const g = graph.Standalone()
 
 // Data Sources - https://grafbase.com/docs/connectors
 //
-const pg = connector.Postgres('pg', { url: g.env('DATABASE_URL') })
+const pg = connector.Postgres('pg', { url: g.env('postgresql://harshit:password@localhost:5432/net') })
 const oidc = auth.OpenIDConnect({ issuer: g.env('OIDC_ISSUER_URL') })
  g.datasource(pg)
 
